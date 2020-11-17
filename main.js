@@ -10,10 +10,12 @@ function onSubmit(e) {
 e.preventDefault();
 
 if(kmtInput.value === '' && paceInput.value === '' ) {
- //   msg.classList.add('error');       
-//    msg.innerHTML = 'Fyll inn en verdi i et av feltene';
-    setTimeout((msg.innerHTML = "TEST"), 5000)
-//    alert('Fyll inn en verdi i et av feltene');
+ //   msg.classList.add('error');     
+
+ //   const tommeFelter = function(){
+ //       msg.innerHTML = 'Fyll inn en verdi i et av feltene';
+ //   };
+     setTimeout(msg.innerHTML = "Fyll inn en verdi i et av feltene" , 3000);
 }
 
 
