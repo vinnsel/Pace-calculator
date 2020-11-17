@@ -9,11 +9,10 @@ myForm.addEventListener('submit', onSubmit);
 function onSubmit(e) {
 e.preventDefault();
 
-if(kmtInput.value === '' || paceInput.value === '' ) {
+if(kmtInput.value === '' && paceInput.value === '' ) {
  //   msg.classList.add('error');       
-    
-    msg.innerHTML = 'Fyll inn en verdi i et av feltene';
-    setTimeout(() => msg.remove(), 5000)
+//    msg.innerHTML = 'Fyll inn en verdi i et av feltene';
+    setTimeout((msg.innerHTML = "TEST"), 5000)
 //    alert('Fyll inn en verdi i et av feltene');
 }
 
