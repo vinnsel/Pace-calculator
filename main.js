@@ -13,9 +13,12 @@ if(kmtInput.value === '' && paceInput.value === '' ) {
  //   msg.classList.add('error');     
 
  //   const tommeFelter = function(){
- //       msg.innerHTML = 'Fyll inn en verdi i et av feltene';
- //   };
-     setTimeout(msg.innerHTML = "Fyll inn en verdi i et av feltene" , 3000);
+
+    msg.innerHTML = 'Fyll inn en verdi i et av feltene';
+    const clearErrorMsg = () => {
+      msg.innerHTML = ''
+    }
+    setTimeout(clearErrorMsg, 5000);
 }
 
 
@@ -66,3 +69,17 @@ paceInput.value = '';
 
 
 }
+
+/*
+var num=10.07;
+var str=num.toString();
+var numarray=str.split('.');
+var a=new Array();
+a=numarray;
+
+console.log(a[0]);
+console.log(a[1]);
+
+
+
+*/
