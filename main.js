@@ -36,6 +36,7 @@ if(kmtInput.value) {
 
 
        const li = document.createElement('li');
+
        li.appendChild(document.createTextNode(`${kmtInput.value} km/t = pace ${convertDecimalToTime}`));
 
     userList.appendChild(li);
