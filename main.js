@@ -23,9 +23,9 @@ if(kmtInput.value) {
     // converting speed to pace  
         const resPace = 60 / kmtInput.value; 
         function minTommss(minutes){
-            var sign = minutes < 0 ? "-" : "";
-            var min = Math.floor(Math.abs(minutes));
-            var sec = Math.floor((Math.abs(minutes) * 60) % 60);
+            const sign = minutes < 0 ? "-" : "";
+            const min = Math.floor(Math.abs(minutes));
+            const sec = Math.floor((Math.abs(minutes) * 60) % 60);
             return sign + (min < 10 ? "0" : "") + min + ":" + (sec < 10 ? "0" : "") + sec;
            }
         
@@ -39,7 +39,7 @@ if(kmtInput.value) {
 
        li.appendChild(document.createTextNode(`${kmtInput.value} km/t = pace ${convertDecimalToTime}`));
 
-    userList.appendChild(li);
+//    userList.appendChild(li);
 
 
    
@@ -48,20 +48,17 @@ if(kmtInput.value) {
 if(paceInput.value) { 
         // converting pace to speed
         function timeStringToFloat(time) {
-            var hoursMinutes = time.split(/[.:]/);
-            var hours = parseInt(hoursMinutes[0], 10);
-            var minutes = hoursMinutes[1] ? parseInt(hoursMinutes[1], 10) : 0;
+            const hoursMinutes = time.split(/[.:]/);
+            const hours = parseInt(hoursMinutes[0], 10);
+            const minutes = hoursMinutes[1] ? parseInt(hoursMinutes[1], 10) : 0;
             return hours + minutes / 60;
           }
-          console.log(timeStringToFloat(paceInput.value));
-          console.log(paceInput);
+
           const timeToDecimal = timeStringToFloat(paceInput.value);
          
           const DecimalTokmt = 60 / timeToDecimal;
-          console.log(DecimalTokmt);
-         var OutputKmtDecimal = DecimalTokmt;
+         let OutputKmtDecimal = DecimalTokmt;
             OutputKmtDecimal = OutputKmtDecimal.toFixed(1);
-        console.log(OutputKmtDecimal);
 
 
 
@@ -72,15 +69,26 @@ if(paceInput.value) {
 
 
         const li = document.createElement('li');
+
+
         li.appendChild(document.createTextNode(`${paceInput.value} pace = ${OutputKmtDecimal} km/t`));
 
-        userList.appendChild(li);
+ //       userList.appendChild(li);
 
+    console.log(userList.appendChild(li));
+    console.log(document.createElement('li'));
+    console.log(li);
+/*
+const liTest = document.createElement('li');
+liTest.firstElementChild.textContent = 'Hello';
+console.log(liTest);
+*/
     }
 
 kmtInput.value = '';
 paceInput.value = '';
 
 
+//li.appendChild(document.createTextNode("Hello");
 
 }
