@@ -24,22 +24,21 @@ if(kmtInput.value) {
         const resPace = 60 / kmtInput.value; 
         function minTommss(minutes){
             const sign = minutes < 0 ? "-" : "";
-            const min = Math.floor(Math.abs(minutes));
+                  const min = Math.floor(Math.abs(minutes));
             const sec = Math.floor((Math.abs(minutes) * 60) % 60);
             return sign + (min < 10 ? "0" : "") + min + ":" + (sec < 10 ? "0" : "") + sec;
            }
         
-         
-           const convertDecimalToTime = minTommss(resPace);
+
+
+         const convertDecimalToTime = minTommss(resPace);
 
 
 
 
        const li = document.createElement('li');
-
        li.appendChild(document.createTextNode(`${kmtInput.value} km/t = pace ${convertDecimalToTime}`));
-
-//    userList.appendChild(li);
+        userList.appendChild(li);
 
 
    
@@ -60,35 +59,17 @@ if(paceInput.value) {
          let OutputKmtDecimal = DecimalTokmt;
             OutputKmtDecimal = OutputKmtDecimal.toFixed(1);
 
-
-
-
-
-
-
-
-
         const li = document.createElement('li');
-
-
         li.appendChild(document.createTextNode(`${paceInput.value} pace = ${OutputKmtDecimal} km/t`));
+        userList.appendChild(li);
 
- //       userList.appendChild(li);
 
-    console.log(userList.appendChild(li));
-    console.log(document.createElement('li'));
-    console.log(li);
-/*
-const liTest = document.createElement('li');
-liTest.firstElementChild.textContent = 'Hello';
-console.log(liTest);
-*/
+
     }
 
 kmtInput.value = '';
 paceInput.value = '';
 
 
-//li.appendChild(document.createTextNode("Hello");
 
 }
